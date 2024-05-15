@@ -1,23 +1,29 @@
-form.addEventListener("submit", (e) => {
+const form = document.getElementById("form");
+
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
-  postProyecto();
-  //   console.log(getFormData());
+  try {
+    await postProyecto();
+  } catch (error) {
+    alert("Error al enviar el proyecto: " + error.message);
+    console.error(error);
+  }
 });
 
 function getFormData() {
   return {
     nombre: document.getElementById("nombre").value,
-    codigo: window.codigo.value,
-    facultad: window.facultad.value,
-    instituto: window.instituto.value,
-    linea_investigacion: window.lineaInvestigacion.value,
-    horas_semanales_contratadas: parseInt(window.horasSemanales.value),
-    fecha_inicio: window.fechaInicioProyecto.value,
-    duracion_semestres: parseInt(window.duracionSemestres.value),
-    fecha_final: window.fechaTerminoProyecto.value,
-    institutos_participantes: window.institucionesParticipantes.value,
-    entidad_financiera_n: window.entidadFinanciadoraNacional.value,
-    entidad_financiera_i: window.entidadFinanciadoraInternacional.value,
+    codigo: document.getElementById("codigo").value,
+    facultad: document.getElementById("facultad").value,
+    instituto: document.getElementById("instituto").value,
+    linea_investigacion: document.getElementById("lineaInvestigacion").value,
+    horas_semanales_contratadas: parseInt(document.getElementById("horasSemanales").value),
+    fecha_inicio: document.getElementById("fechaInicioProyecto").value,
+    duracion_semestres: parseInt(document.getElementById("duracionSemestres").value),
+    fecha_final: document.getElementById("fechaTerminoProyecto").value,
+    institutos_participantes: document.getElementById("institucionesParticipantes").value,
+    entidad_financiera_n: document.getElementById("entidadFinanciadoraNacional").value,
+    entidad_financiera_i: document.getElementById("entidadFinanciadoraInternacional").value,
   };
 }
 
@@ -35,12 +41,10 @@ async function postProyecto() {
   );
 
   if (!response.ok) {
-    alert("fallo en envio!");
-    let data = await response.json();
-    console.log(data);
-    return;
+    const data = await response.json();
+    throw new Error(data.error || "Fallo en el envío");
   } else {
-    alert("envio exitoso!");
-    window.form.reset();
+    alert("Envío exitoso!");
+    form.reset();
   }
 }
