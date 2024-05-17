@@ -29,7 +29,7 @@ function getFormData() {
 
 async function postProyecto() {
   const response = await fetch(
-    "https://uasd-sistema-g-proyectos-api.vercel.app/api/proyectos",
+    "https://uasd-sistema-g-proyectos-api-production-9323.up.railway.app/api/proyectos",
     {
       method: "POST",
       mode: "cors",
