@@ -32,7 +32,7 @@ async function postProyecto() {
     "https://uasd-sistema-g-proyectos-api-production-9323.up.railway.app/api/proyectos",
     {
       method: "POST",
-      mode: "cors",
+	  mode: "cors",
       headers: {
         "Content-Type": "application/json",
       },

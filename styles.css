@@ -1,83 +1,89 @@
 body {
-    background-color: #bdfafa;
-    color: #000000;
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Cambiado de center a flex-start para evitar problemas de scroll */
+  min-height: 100vh;
 }
 
 form {
-    max-width: 800px;
-
-    margin: 0 auto;
-
-    padding: 30px;
-
-    background-color: #ffffff;
-
-    border: 1px solid #00c6c7;
-
-    border-radius: 5px;
-
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px; /* Añadido margen para asegurar espacio alrededor del formulario */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
 }
 
-h1,
-h2 {
-    color: #00c6c7;
-
-}
-
-section {
-    margin-bottom: 20px;
+h1, h2 {
+  color: #333;
 }
 
 label {
-    display: block;
-
-    margin-bottom: 5px;
-
-    color: #00c6c7;
-
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
 }
 
-input,
+input[type="text"],
+input[type="number"],
+input[type="date"],
 textarea {
-    width: 100%;
-
-    padding: 8px;
-
-    margin-bottom: 10px;
-
-    border: 1px solid #00c6c7;
-
-    border-radius: 3px;
-
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 button {
-    background-color: #00c6c7;
-
-    color: #ffffff;
-
-    padding: 10px;
-
-    border: none;
-
-    border-radius: 3px;
-
-    cursor: pointer;
-
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 button:hover {
-    background-color: #00ffff;
-
+  background-color: #218838;
 }
 
-a {
-    color: #8bffff;
-
+section {
+  margin-bottom: 20px;
 }
 
-a:hover {
-    color: #00ffff;
+ul {
+  padding-left: 20px;
+}
 
+ul li {
+  margin-bottom: 8px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Ajustes responsivos para dispositivos móviles */
+@media (max-width: 600px) {
+  form {
+    padding: 15px;
+    margin: 10px; /* Ajuste adicional para móviles */
+  }
+
+  h1, h2 {
+    font-size: 1.5em;
+  }
+
+  label, input, textarea, button {
+    font-size: 1em;
+  }
 }
