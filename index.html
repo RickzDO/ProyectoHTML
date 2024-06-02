@@ -38,43 +38,17 @@
         <label for="codigo">Código:</label>
         <input type="text" id="codigo" name="codigo" required />
 
-        <label for="categoriaAcademica">Categoría Académica:</label>
-        <input type="text" id="categoriaAcademica" name="categoriaAcademica" required />
-
         <label for="facultad">Facultad:</label>
         <input type="text" id="facultad" name="facultad" required />
 
         <label for="instituto">Instituto:</label>
         <input type="text" id="instituto" name="instituto" required />
 
-        <label for="escuela">Escuela (si es docente):</label>
-        <input type="text" id="escuela" name="escuela" />
-
         <label for="lineaInvestigacion">Línea de Investigación:</label>
         <input type="text" id="lineaInvestigacion" name="lineaInvestigacion" required />
 
-        <label for="programa">Programa (si aplica):</label>
-        <input type="text" id="programa" name="programa" />
-
         <label for="horasSemanales">Horas Semanales Contratadas:</label>
         <input type="number" id="horasSemanales" name="horasSemanales" required />
-
-        <!-- Resoluciones -->
-        <label for="resolucionCU">Resolución CU:</label>
-        <input type="text" id="resolucionCU" name="resolucionCU" placeholder="No." required />
-        <input type="date" id="fechaResolucionCU" name="fechaResolucionCU" placeholder="Fecha" required />
-
-        <label for="resolucionCAIP">Resolución CAIP:</label>
-        <input type="text" id="resolucionCAIP" name="resolucionCAIP" placeholder="No." required />
-        <input type="date" id="fechaResolucionCAIP" name="fechaResolucionCAIP" placeholder="Fecha" required />
-
-        <label for="resolucionCGICT">Resolución CGICT:</label>
-        <input type="text" id="resolucionCGICT" name="resolucionCGICT" placeholder="No." required />
-        <input type="date" id="fechaResolucionCGICT" name="fechaResolucionCGICT" placeholder="Fecha" required />
-
-        <label for="resolucionDirectivoFacultad">Resolución Consejo Directivo Facultad:</label>
-        <input type="text" id="resolucionDirectivoFacultad" name="resolucionDirectivoFacultad" placeholder="No." required />
-        <input type="date" id="fechaResolucionDirectivoFacultad" name="fechaResolucionDirectivoFacultad" placeholder="Fecha" required />
 
         <label for="fechaInicioProyecto">Fecha Inicio del Proyecto:</label>
         <input type="date" id="fechaInicioProyecto" name="fechaInicioProyecto" required />
@@ -95,7 +69,7 @@
         <input type="text" id="entidadFinanciadoraInternacional" name="entidadFinanciadoraInternacional" />
       </section>
 
-      <button id="enviar" type="submit">Enviar Informe</button>
+      <button id="enviar" type="button" onclick="getFormData()">Enviar Informe</button>
     </form>
     <script src="./js/script.js"></script>
   </body>
