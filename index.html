@@ -9,6 +9,7 @@
 <body>
     <form id="form" method="post">
         <h1>Informe de Proyecto de Investigación</h1>
+        
         <!-- Documentación del Formulario -->
         <section>
             <h2>1. Introducción</h2>
@@ -17,8 +18,11 @@
                 sobre el progreso de un proyecto de investigación. Se divide en
                 secciones que abarcan desde la información general del proyecto hasta
                 la evaluación y observaciones de los directores académicos.
+				<br>
+				<br>
             </p>
             <p><strong>Uso del Formulario:</strong></p>
+			<br>
             <ul>
                 <li>Complete todos los campos obligatorios (marcados con asterisco).</li>
                 <li>Proporcione información precisa y actualizada.</li>
@@ -65,6 +69,66 @@
 
             <label for="entidadFinancieraInternacional">Entidad Financiera Internacional:</label>
             <input type="text" id="entidadFinancieraInternacional" name="entidadFinancieraInternacional" maxlength="100" />
+        </section>
+
+        <!-- II. RESUMEN DEL PROYECTO -->
+        <section>
+            <h2>II. RESUMEN DEL PROYECTO</h2>
+            <label for="resumen">Resumen:</label>
+            <textarea id="resumen" name="resumen" rows="4" maxlength="6000"></textarea>
+        </section>
+
+        <!-- III. OBJETIVOS DEL PROYECTO -->
+        <section>
+            <h2>III. OBJETIVOS DEL PROYECTO</h2>
+            <label for="objetivoGeneral">Objetivo General:</label>
+            <textarea id="objetivoGeneral" name="objetivoGeneral" rows="4" maxlength="1000"></textarea>
+
+            <label for="objetivosEspecificos">Objetivos Específicos:</label>
+            <textarea id="objetivosEspecificos" name="objetivosEspecificos" rows="4" maxlength="2000"></textarea>
+        </section>
+
+        <!-- IV. ESTADO DEL PROYECTO -->
+        <section>
+            <h2>IV. ESTADO DEL PROYECTO</h2>
+            <label for="actividadesRealizadas">Actividades Realizadas:</label>
+            <textarea id="actividadesRealizadas" name="actividadesRealizadas" rows="4" maxlength="5000"></textarea>
+
+            <label for="logros">Logros:</label>
+            <textarea id="logros" name="logros" rows="4" maxlength="5000"></textarea>
+
+            <label for="dificultades">Dificultades:</label>
+            <textarea id="dificultades" name="dificultades" rows="4" maxlength="5000"></textarea>
+
+            <label for="propuestaSolucion">Propuesta de Solución:</label>
+            <textarea id="propuestaSolucion" name="propuestaSolucion" rows="4" maxlength="5000"></textarea>
+        </section>
+
+        <!-- V. EVALUACIÓN DEL PROYECTO -->
+        <section>
+            <h2>V. EVALUACIÓN DEL PROYECTO</h2>
+            <label for="evaluacionGlobal">Evaluación Global:</label>
+            <textarea id="evaluacionGlobal" name="evaluacionGlobal" rows="4" maxlength="5000"></textarea>
+
+            <label for="evaluacionResultados">Evaluación de Resultados:</label>
+            <textarea id="evaluacionResultados" name="evaluacionResultados" rows="4" maxlength="5000"></textarea>
+        </section>
+
+        <!-- VI. CONCLUSIONES Y RECOMENDACIONES -->
+        <section>
+            <h2>VI. CONCLUSIONES Y RECOMENDACIONES</h2>
+            <label for="conclusiones">Conclusiones:</label>
+            <textarea id="conclusiones" name="conclusiones" rows="4" maxlength="5000"></textarea>
+
+            <label for="recomendaciones">Recomendaciones:</label>
+            <textarea id="recomendaciones" name="recomendaciones" rows="4" maxlength="5000"></textarea>
+        </section>
+
+        <!-- VII. ANEXOS -->
+        <section>
+            <h2>VII. ANEXOS</h2>
+            <label for="anexos">Anexos:</label>
+            <textarea id="anexos" name="anexos" rows="4" maxlength="5000"></textarea>
         </section>
 
         <button id="enviar" type="submit">Enviar Informe</button>
