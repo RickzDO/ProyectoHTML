@@ -1,5 +1,3 @@
-// script.js
-
 const form = document.getElementById("form");
 
 form.addEventListener("submit", async (e) => {
@@ -29,9 +27,17 @@ function getFormData() {
     };
 }
 
+function formatDate(dateString) {
+    const date = new Date(dateString);
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+}
+
 async function postProyecto() {
     const response = await fetch(
-        "https://uasd-sistema-g-proyectos-api-production-9323.up.railway.app/api/proyectos",
+        "https://uasd-sistema-g-proyectos-api-production-9323.up.railway.app/api/proyectos",  // Asegúrate de que la URL es correcta
         {
             method: "POST",
             mode: "cors",
