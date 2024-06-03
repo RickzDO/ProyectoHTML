@@ -26,18 +26,6 @@ function getFormData() {
         institutos_participantes: document.getElementById("institucionesParticipantes").value,
         entidad_financiera_n: document.getElementById("entidadFinancieraNacional").value,
         entidad_financiera_i: document.getElementById("entidadFinancieraInternacional").value,
-        resumen: document.getElementById("resumen").value,
-        objetivo_general: document.getElementById("objetivoGeneral").value,
-        objetivos_especificos: document.getElementById("objetivosEspecificos").value,
-        actividades_realizadas: document.getElementById("actividadesRealizadas").value,
-        logros: document.getElementById("logros").value,
-        dificultades: document.getElementById("dificultades").value,
-        propuesta_solucion: document.getElementById("propuestaSolucion").value,
-        evaluacion_global: document.getElementById("evaluacionGlobal").value,
-        evaluacion_resultados: document.getElementById("evaluacionResultados").value,
-        conclusiones: document.getElementById("conclusiones").value,
-        recomendaciones: document.getElementById("recomendaciones").value,
-        anexos: document.getElementById("anexos").value
     };
 }
 
