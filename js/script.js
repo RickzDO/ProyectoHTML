@@ -1,3 +1,5 @@
+// script.js
+
 const form = document.getElementById("form");
 
 form.addEventListener("submit", async (e) => {
@@ -24,20 +26,24 @@ function getFormData() {
         institutos_participantes: document.getElementById("institucionesParticipantes").value,
         entidad_financiera_n: document.getElementById("entidadFinancieraNacional").value,
         entidad_financiera_i: document.getElementById("entidadFinancieraInternacional").value,
+        resumen: document.getElementById("resumen").value,
+        objetivo_general: document.getElementById("objetivoGeneral").value,
+        objetivos_especificos: document.getElementById("objetivosEspecificos").value,
+        actividades_realizadas: document.getElementById("actividadesRealizadas").value,
+        logros: document.getElementById("logros").value,
+        dificultades: document.getElementById("dificultades").value,
+        propuesta_solucion: document.getElementById("propuestaSolucion").value,
+        evaluacion_global: document.getElementById("evaluacionGlobal").value,
+        evaluacion_resultados: document.getElementById("evaluacionResultados").value,
+        conclusiones: document.getElementById("conclusiones").value,
+        recomendaciones: document.getElementById("recomendaciones").value,
+        anexos: document.getElementById("anexos").value
     };
-}
-
-function formatDate(dateString) {
-    const date = new Date(dateString);
-    const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, '0');
-    const day = String(date.getDate()).padStart(2, '0');
-    return `${year}-${month}-${day}`;
 }
 
 async function postProyecto() {
     const response = await fetch(
-        "https://uasd-sistema-g-proyectos-api-production-9323.up.railway.app/api/proyectos",  // Asegúrate de que la URL es correcta
+        "https://uasd-sistema-g-proyectos-api-production-9323.up.railway.app/api/proyectos",
         {
             method: "POST",
             mode: "cors",
